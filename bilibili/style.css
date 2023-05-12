@@ -1,3 +1,10 @@
+body {
+
+  margin-top: 50px; /* 将body的上外边距设为50像素 */
+
+}
+
+
 /* 加载自定义字体 */
 
 @font-face {

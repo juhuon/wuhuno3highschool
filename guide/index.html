@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>导航网站</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url("1.jpg"), url("2.jpg"), url("3.jpg");
+      background-position: top, center, bottom;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .search-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      background-color: #fff;
+      border-radius: 30px;
+      padding: 10px;
+      box-shadow: 0px 0px 5px #000;
+    }
+
+    .search-box select {
+      font-size: 16px;
+      background: transparent;
+      border: none;
+      outline: none;
+      width: 80px;
+      margin-right: 5px;
+    }
+
+    .search-box input[type="text"] {
+      font-size: 16px;
+      color: #000;
+      background: transparent;
+      border: none;
+      outline: none;
+      flex: 1;
+      margin-left: 5px;
+    }
+
+    .search-box input[type="submit"] {
+      background-color: #007fff;
+      border: none;
+      color: #fff;
+      padding: 10px;
+      border-radius: 50px;
+      cursor: pointer;
+    }
+
+    .site-list {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .site-list a {
+      margin-right: 20px;
+      color: #fff;
+      font-size: 20px;
+      text-decoration: none;
+    }
+
+    .site-list a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="search-container">
+    <form action="https://www.baidu.com/s" method="get" target="_blank" class="search-box">
+      <select name="ie">
+        <option value="utf-8">百度</option>
+        <option value="utf-8" formaction="https://cn.bing.com/search">必应</option>
+        <option value="utf-8" formaction="https://www.sogou.com/web">搜狗</option>
+        <option value="utf-8" formaction="https://www.google.com/search">Google</option>
+      </select>
+      <input type="text" name="wd" placeholder="搜索">
+      <input type="submit" value="搜索">
+    </form>
+  </div>
+  <div class="site-list">
+    <a href="https://www.bilibili.com" target="_blank">哔哩哔哩</a>
+    <a href="https://www.zhihu.com" target="_blank">知乎</a>
+    <a href="https://www.cctv.com" target="_blank">央视网</a>
+    <a href="https://www.baidu.com" target="_blank">百度一下</a>
+    <a href="https://cn.bing.com" target="_blank">必应</a>
+  </div>
+</body>
+
+</html>

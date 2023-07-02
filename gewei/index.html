@@ -1,41 +1,28 @@
 <!DOCTYPE html>
-
 <html lang="zh-CN">
-
 <head>
-
     <meta charset="UTF-8">
-
     <title>沉痛悼念葛威同志</title>
-
 </head>
-
 <body>
-
 <div style="text-align:center;">
-
     <img src="https://s1.ax1x.com/2023/05/31/p9vgMGD.jpg" width="400" height="450">
-
-    <h1 style="font-size:60px;font-family:黑体">  沉痛悼念葛威同志</h1>
-
+    <h1 style="font-size:60px;font-family:黑体">沉痛悼念葛威同志</h1>
+    <audio id="audioPlayer" src="111.mp3"></audio>
 </div>
-<audio id="myAudio" controls autoplay>
-  <source src="111.mp3" type="audio/mp3">
-  Your browser does not support the audio element.
-</audio>
+
 <script>
-var audio = document.getElementById("myAudio");
+    var audio = document.getElementById("audioPlayer");
 
-window.addEventListener('click', playAudio); // 点击事件触发播放音频
-window.addEventListener('scroll', playAudio); // 滚动事件触发播放音频
+    // 点击页面时播放音频
+    document.addEventListener("click", function() {
+        audio.play();
+    });
 
-function playAudio() {
-  // 检查音频是否已经播放或结束
-  if (!audio.paused || !audio.ended) return;
-  
-  // 播放音频
-  audio.play();
-}
+    // 如果想要在滚动时播放音频，可以使用scroll事件
+    document.addEventListener("scroll", function() {
+        audio.play();
+    });
 </script>
 
 </body>

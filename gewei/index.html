@@ -23,13 +23,11 @@
   <source src="111.mp3" type="audio/mp3">
   Your browser does not support the audio element.
 </audio>
-
 <script>
-// 自动播放音频
-window.onload = function() {
+window.addEventListener('load', function() {
   var audio = document.getElementById("myAudio");
   audio.play();
-}
+});
 </script>
 
 </body>

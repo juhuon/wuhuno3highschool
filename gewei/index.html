@@ -24,12 +24,19 @@
   Your browser does not support the audio element.
 </audio>
 <script>
-window.addEventListener('load', function() {
-  var audio = document.getElementById("myAudio");
+var audio = document.getElementById("myAudio");
+
+window.addEventListener('click', playAudio); // 点击事件触发播放音频
+window.addEventListener('scroll', playAudio); // 滚动事件触发播放音频
+
+function playAudio() {
+  // 检查音频是否已经播放或结束
+  if (!audio.paused || !audio.ended) return;
+  
+  // 播放音频
   audio.play();
-});
+}
 </script>
 
 </body>
 </html>
-
